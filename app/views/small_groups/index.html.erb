@@ -14,9 +14,11 @@
       <th>Initial<br>Points</th>
       <th>Points<br>(Week)</th>
       <th>Points<br>(Total)</th>
-      <th></th>
-      <th></th>
-      <th></th>
+      <% if user_signed_in? %>
+        <th></th>
+        <th></th>
+        <th></th>
+      <% end %>
     </tr>
   </thead>
 
@@ -34,9 +36,11 @@
         <td><%= small_group.initialPoints %></td>
         <td><%= small_group.pointsWeek %></td>
         <td><%= small_group.pointsTotal %></td>
-        <td><%= link_to 'Show', small_group %></td>
-        <td><%= link_to 'Edit', edit_small_group_path(small_group) %></td>
-        <td><%= link_to 'Destroy', small_group, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <% if user_signed_in? %>
+          <td><%= link_to 'Show', small_group %></td>
+          <td><%= link_to 'Edit', edit_small_group_path(small_group) %></td>
+          <td><%= link_to 'Destroy', small_group, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <% end %>
       </tr>
     <% end %>
   </tbody>

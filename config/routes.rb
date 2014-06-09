@@ -1,5 +1,6 @@
 Hackiton::Application.routes.draw do
 
+  devise_for :users
   resources :pledges
 
   resources :small_groups

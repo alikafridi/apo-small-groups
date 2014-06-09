@@ -1,28 +1,20 @@
 class SmallGroupsController < ApplicationController
   before_action :set_small_group, only: [:show, :edit, :update, :destroy]
 
-  # GET /small_groups
-  # GET /small_groups.json
   def index
     @small_groups = SmallGroup.all
   end
 
-  # GET /small_groups/1
-  # GET /small_groups/1.json
   def show
   end
 
-  # GET /small_groups/new
   def new
     @small_group = SmallGroup.new
   end
 
-  # GET /small_groups/1/edit
   def edit
   end
 
-  # POST /small_groups
-  # POST /small_groups.json
   def create
     @small_group = SmallGroup.new(small_group_params)
 
@@ -33,38 +25,26 @@ class SmallGroupsController < ApplicationController
     end
   end
 
-  # PATCH/PUT /small_groups/1
-  # PATCH/PUT /small_groups/1.json
   def update
-    respond_to do |format|
-      if @small_group.update(small_group_params)
-        format.html { redirect_to @small_group, notice: 'Small group was successfully updated.' }
-        format.json { head :no_content }
-      else
-        format.html { render action: 'edit' }
-        format.json { render json: @small_group.errors, status: :unprocessable_entity }
-      end
+
+    if @small_group.update(small_group_params)
+      redirect_to @small_group, notice: 'Pin was successfully updated.'
+    else
+      render action: 'edit'
     end
   end
 
-  # DELETE /small_groups/1
-  # DELETE /small_groups/1.json
   def destroy
     @small_group.destroy
-    respond_to do |format|
-      format.html { redirect_to small_groups_url }
-      format.json { head :no_content }
-    end
+    redirect_to small_groups_url
   end
 
   private
-    # Use callbacks to share common setup or constraints between actions.
-    def set_small_group
-      @small_group = SmallGroup.find(params[:id])
-    end
-
-    # Never trust parameters from the scary internet, only allow the white list through.
-    def small_group_params
-      params.require(:small_group).permit(:name, :ptas, :numPledges, :killsWeek, :killsTotal, :photosWeek, :photosTotal, :throwdownPoints, :initialPoints, :pointsWeek, :pointsTotal)
-    end
+  def set_small_group
+    @small_group = SmallGroup.find(params[:id])
   end
+
+  def small_group_params
+    params.require(:small_group).permit(:name, :ptas, :numPledges, :killsWeek, :killsTotal, :photosWeek, :photosTotal, :throwdownPoints, :initialPoints, :pointsWeek, :pointsTotal)
+  end
+end
