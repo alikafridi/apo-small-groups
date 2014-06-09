@@ -1,0 +1,64 @@
+<!-- This is the edit form -->
+
+<%= form_for(@small_group) do |f| %>
+  <% if @small_group.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@small_group.errors.count, "error") %> prohibited this small_group from being saved:</h2>
+
+      <ul>
+      <% @small_group.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :name %><br>
+    <%= f.text_field :name %>
+  </div>
+  <div class="field">
+    <%= f.label :ptas %><br>
+    <%= f.text_field :ptas %>
+  </div>
+  <div class="field">
+    <%= f.label :numPledges %><br>
+    <%= f.number_field :numPledges %>
+  </div>
+  <div class="field">
+    <%= f.label :killsWeek %><br>
+    <%= f.number_field :killsWeek %>
+  </div>
+  <div class="field">
+    <%= f.label :killsTotal %><br>
+    <%= f.number_field :killsTotal %>
+  </div>
+  <div class="field">
+    <%= f.label :photosWeek %><br>
+    <%= f.number_field :photosWeek %>
+  </div>
+  <div class="field">
+    <%= f.label :photosTotal %><br>
+    <%= f.number_field :photosTotal %>
+  </div>
+  <div class="field">
+    <%= f.label :throwdownPoints %><br>
+    <%= f.number_field :throwdownPoints %>
+  </div>
+  <div class="field">
+    <%= f.label :initialPoints %><br>
+    <%= f.number_field :initialPoints %>
+  </div>
+  <div class="field">
+    <%= f.label :pointsWeek %><br>
+    <%= f.number_field :pointsWeek %>
+  </div>
+  <div class="field">
+    <%= f.label :pointsTotal %><br>
+    <%= f.number_field :pointsTotal %>
+  </div>
+
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

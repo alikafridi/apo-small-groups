@@ -1,5 +1,7 @@
 Hackiton::Application.routes.draw do
 
+  resources :small_groups
+
   root "pages#home"
   get "feed" => "pages#feed"
   get "throwdowns_rules" => "pages#throwdowns_rules"
@@ -15,6 +17,7 @@ Hackiton::Application.routes.draw do
   get "photo_submit" => "pages#photo_submit"
   get "points" => "pages#points"
   get "contact" => "pages#contact"
+  get "small_groups" => "pages#smallGroups"
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".

@@ -1,0 +1,27 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  name: MyString
+  ptas: MyString
+  numPledges: 1
+  killsWeek: 1
+  killsTotal: 1
+  photosWeek: 1
+  photosTotal: 1
+  throwdownPoints: 1
+  initialPoints: 1
+  pointsWeek: 1
+  pointsTotal: 1
+
+two:
+  name: MyString
+  ptas: MyString
+  numPledges: 1
+  killsWeek: 1
+  killsTotal: 1
+  photosWeek: 1
+  photosTotal: 1
+  throwdownPoints: 1
+  initialPoints: 1
+  pointsWeek: 1
+  pointsTotal: 1

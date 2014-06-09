@@ -1,5 +1,5 @@
 <nav class="navbar navbar-default" role="navigation">
-  <div class="container-fluid">
+  <div class="container">
     <!-- Brand and toggle get grouped for better mobile display -->
     <div class="navbar-header">
       <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
@@ -18,14 +18,15 @@
         <li class="dropdown">
           <a href="#" class="dropdown-toggle" data-toggle="dropdown">Throwdowns<b class="caret"></b></a>
           <ul class="dropdown-menu">
-            <li><%= link_to "Rules", throwdowns_rules_path %></li>
+            <li><%= link_to "About and Rules", throwdowns_rules_path %></li>
             <li><%= link_to "Current Throwdowns", throwdowns_current_path %></li>
           </ul>
         </li>
         <li class="dropdown">
           <a href="#" class="dropdown-toggle" data-toggle="dropdown">Spoon Wars<b class="caret"></b></a>
           <ul class="dropdown-menu">
-            <li><%= link_to "Rules", spoonwars_rules_path %></li>
+            <li><%= link_to "About and Rules", spoonwars_rules_path %></li>
+            <li><%= link_to "Matchups", spoonwars_matchups_path %></li>
             <li><%= link_to "Pledge Roster", spoonwars_pledge_roster_path %></li>
             <li><%= link_to "Report a Kill", spoonwars_report_kill_path %></li>
             <li><%= link_to "Report a Wrongful Death", spoonwars_wrongful_death_path %></li>
@@ -35,15 +36,14 @@
         <li class="dropdown">
           <a href="#" class="dropdown-toggle" data-toggle="dropdown">Photo Challenge<b class="caret"></b></a>
           <ul class="dropdown-menu">
-            <li><%= link_to "Rules", photo_rules_path %></li>
+            <li><%= link_to "About and Rules", photo_rules_path %></li>
             <li><%= link_to "Current Challenges", photo_current_path %></li>
             <li><%= link_to "Submit a Pic", photo_submit_path %></li>
           </ul>
         </li>
         <li><%= link_to "Points", points_path %></li>
-        <li><%= link_to "Contact", contact_path %></li>
       </ul>
     </div><!-- /.navbar-collapse -->
 
-  </div><!-- /.container-fluid -->
+  </div><!-- /.container -->
 </nav>

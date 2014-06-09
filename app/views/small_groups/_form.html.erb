@@ -1,0 +1,39 @@
+<%= form_for(@small_group) do |f| %>
+  <% if @small_group.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@small_group.errors.count, "error") %> prohibited this small_group from being saved:</h2>
+
+      <ul>
+      <% @small_group.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :name %><br>
+    <%= f.text_field :name %>
+  </div>
+  <div class="field">
+    <%= f.label :ptas %><br>
+    <%= f.text_field :ptas %>
+  </div>
+  <div class="field">
+    <%= f.label :numPledges %><br>
+    <%= f.number_field :numPledges %>
+  </div>
+
+  <%= f.hidden_field :killsWeek, :value => 0 %>
+  <%= f.hidden_field :killsTotal, :value => 0 %>
+  <%= f.hidden_field :photosWeek, :value => 0 %>
+  <%= f.hidden_field :photosTotal, :value => 0 %>
+  <%= f.hidden_field :throwdownPoints, :value => 0 %>
+  <%= f.hidden_field :initialPoints, :value => 100 %>
+  <%= f.hidden_field :pointsWeek, :value => 0 %>
+  <%= f.hidden_field :pointsTotal, :value => 0 %>
+
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

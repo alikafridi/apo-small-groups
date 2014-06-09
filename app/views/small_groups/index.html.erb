@@ -1,0 +1,47 @@
+<h1>Listing All Small Groups</h1>
+
+<table class="table table-hover">
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>PTAs</th>
+      <th>Pledges</th>
+      <th>Kills<br>(Week)</th>
+      <th>Kills<br>(Total)</th>
+      <th>Photos<br>(Week)</th>
+      <th>Photos<br>(Total)</th>
+      <th>Throwdown<br>Points</th>
+      <th>Initial<br>Points</th>
+      <th>Points<br>(Week)</th>
+      <th>Points<br>(Total)</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @small_groups.each do |small_group| %>
+      <tr>
+        <td><%= small_group.name %></td>
+        <td><%= small_group.ptas %></td>
+        <td><%= small_group.numPledges %></td>
+        <td><%= small_group.killsWeek %></td>
+        <td><%= small_group.killsTotal %></td>
+        <td><%= small_group.photosWeek %></td>
+        <td><%= small_group.photosTotal %></td>
+        <td><%= small_group.throwdownPoints %></td>
+        <td><%= small_group.initialPoints %></td>
+        <td><%= small_group.pointsWeek %></td>
+        <td><%= small_group.pointsTotal %></td>
+        <td><%= link_to 'Show', small_group %></td>
+        <td><%= link_to 'Edit', edit_small_group_path(small_group) %></td>
+        <td><%= link_to 'Destroy', small_group, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'Add a Small Group', new_small_group_path %>
