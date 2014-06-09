@@ -1,5 +1,6 @@
 class PledgesController < ApplicationController
   before_action :set_pledge, only: [:show, :edit, :update, :destroy]
+  before_action :authenticate_user!, except: [:index]
 
   def index
     @pledges = Pledge.all
@@ -45,6 +46,6 @@ class PledgesController < ApplicationController
   end
 
   def pledge_params
-    params.require(:pledge).permit(:name, :smallGroup, :killsWeek, :diedWeek, :killsTotal, :deathsTotal)
+    params.require(:pledge).permit(:name, :smallGroup, :smallGroups_id, :killsWeek, :diedWeek, :killsTotal, :deathsTotal)
   end
 end

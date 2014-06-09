@@ -1,5 +1,6 @@
 class SmallGroupsController < ApplicationController
   before_action :set_small_group, only: [:show, :edit, :update, :destroy]
+  before_action :authenticate_user!, except: [:index]
 
   def index
     @small_groups = SmallGroup.all
