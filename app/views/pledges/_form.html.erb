@@ -1,0 +1,41 @@
+<%= form_for(@pledge) do |f| %>
+  <% if @pledge.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@pledge.errors.count, "error") %> prohibited this pledge from being saved:</h2>
+
+      <ul>
+      <% @pledge.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :name %><br>
+    <%= f.text_field :name %>
+  </div>
+  <div class="field">
+    <%= f.label :smallGroup %><br>
+    <%= f.text_field :smallGroup %>
+  </div>
+  <div class="field">
+    <%= f.label :killsWeek %><br>
+    <%= f.number_field :killsWeek %>
+  </div>
+  <div class="field">
+    <%= f.label :diedWeek %><br>
+    <%= f.check_box :diedWeek %>
+  </div>
+  <div class="field">
+    <%= f.label :killsTotal %><br>
+    <%= f.number_field :killsTotal %>
+  </div>
+  <div class="field">
+    <%= f.label :deathsTotal %><br>
+    <%= f.number_field :deathsTotal %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

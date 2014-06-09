@@ -1,5 +1,7 @@
 Hackiton::Application.routes.draw do
 
+  resources :pledges
+
   resources :small_groups
 
   root "pages#home"

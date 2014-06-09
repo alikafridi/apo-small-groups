@@ -1,0 +1,34 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @pledge.name %>
+</p>
+
+<p>
+  <strong>Smallgroup:</strong>
+  <%= @pledge.smallGroup %>
+</p>
+
+<p>
+  <strong>Killsweek:</strong>
+  <%= @pledge.killsWeek %>
+</p>
+
+<p>
+  <strong>Diedweek:</strong>
+  <%= @pledge.diedWeek %>
+</p>
+
+<p>
+  <strong>Killstotal:</strong>
+  <%= @pledge.killsTotal %>
+</p>
+
+<p>
+  <strong>Deathstotal:</strong>
+  <%= @pledge.deathsTotal %>
+</p>
+
+<%= link_to 'Edit', edit_pledge_path(@pledge) %> |
+<%= link_to 'Back', pledges_path %>
