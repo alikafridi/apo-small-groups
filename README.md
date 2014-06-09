@@ -1,9 +1,5 @@
 # README
 
-This is a base rails project with some customizations set to allow for future projects to be started faster. 
+This web application is set up to manage APO UIUC's small group challenges. The 3 types of challenges are throwdowns, small group wars, and photo challenges.
 
-This project already includes:
-* Some Pages
-* Header and Footer partials
-* Some Custom CSS
-* Bootstrap Integration
+This project will be pushed online to Heroku soon.
