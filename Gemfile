@@ -1,14 +1,14 @@
 source 'https://rubygems.org'
 
-gem 'rails', '4.0.2'
-gem 'sass-rails', '~> 4.0.0'
-gem 'uglifier', '>= 1.3.0'
-gem 'coffee-rails', '~> 4.0.0'
-gem 'jquery-rails'
-gem 'turbolinks'
-gem 'jbuilder', '~> 1.2'
+gem 'rails', '5.0.0'
+gem 'sass-rails', '~> 5.0.5'
+gem 'uglifier', '>= 2.7.2'
+gem 'coffee-rails', '~> 4.1.1'
+gem 'jquery-rails', '>= 4.0.1'
+gem 'turbolinks', '>= 5.0.0'
+gem 'jbuilder', '~> 1.5', '>= 1.5.3'
 gem 'bootstrap-sass'
-gem 'devise'
+gem 'devise', '>= 4.0.0'
 
 # Use sqlite3 as the database for development and test purposes
 group :development, :test do
